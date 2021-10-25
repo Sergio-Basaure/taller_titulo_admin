@@ -33,3 +33,5 @@ class ReclamoAdmin(AbstractaAdmin):
             obj.asignado = False
             obj.save()
         return super().save_model(request, obj, form, change)
+
+admin.site.register(Reclamos ,ReclamoAdmin)
