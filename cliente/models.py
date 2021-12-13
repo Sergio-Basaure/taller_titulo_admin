@@ -20,11 +20,9 @@ class Cliente(AbstractBaseUser):
     USERNAME_FIELD = 'email' #   o email -> campo representativo del usuario
     REQUIRED_FIELDS = ['nombres', 'apellidos', 'rut', 'contacto']
 
-
     class Meta:
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
 
     def __str__(self):
         return f'{self.nombres} {self.apellidos}'
-

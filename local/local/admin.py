@@ -9,8 +9,8 @@ class LocalResoucer(resources.ModelResource):
 
 class LocalAdmin(AbstractaAdmin):
     search_fields = ('nombre', 'direccion')
-    list_display = ('nombre', 'direccion', 'contacto', 'estado')
-    list_editable = ('contacto',)
+    list_display = ('nombre', 'direccion', 'contacto', 'estado', 'aforo_maximo')
+    list_editable = ('contacto','aforo_maximo')
     resource_class = LocalResoucer
 
 admin.site.register(Local,LocalAdmin)

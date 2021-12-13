@@ -5,8 +5,8 @@ from usuario.models import Usuario
 
 class Reclamos(models.Model):
     id = models.AutoField(primary_key = True)
-    id_tipo = models.ForeignKey(TipoReclamo, on_delete = models.CASCADE)
-    id_local = models.ForeignKey(Local, on_delete = models.CASCADE)
+    id_tipo = models.ForeignKey(TipoReclamo, related_name='categoria', on_delete = models.CASCADE, blank = False, null = False)
+    id_local = models.ForeignKey(Local, on_delete = models.CASCADE, blank = False, null = False)
     descripcion = models.TextField('Descripción', max_length = 300, blank = False, null = False)
     estado = models.BooleanField('Estado', default = True)
     asignado = models.BooleanField('Asignado', default = False)

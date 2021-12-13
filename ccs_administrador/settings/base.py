@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -8,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-'django-insecure-w7t&*k-l6(@0cq&)74$7n33k%^p0^)y!2c%(jku3%#dqd#%t!8'
+SECRET_KEY =  'django-insecure-w7t&*k-l6(@0cq&)74$7n33k%^p0^)y!2c%(jku3%#dqd#%t!8'
 
 
 # Application definition
@@ -28,7 +29,6 @@ INSTALLED_APPS = [
     'servicios',
     'contacto',
     'cliente',
-    
 
 ]
 
@@ -158,6 +158,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
